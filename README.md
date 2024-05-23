@@ -1,5 +1,9 @@
 # Currency converter
 
+## Description
+
+Convert one of the selected currencies to PLN.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
