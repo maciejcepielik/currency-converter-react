@@ -54,7 +54,7 @@ const Form = () => (
             <p className="form__paragraph form__paragraph--result">Podana kwota w wybranej walucie wynosi: <strong></strong>
             </p>
         </fieldset>
-        <p className="form__warning">*Kurs z dnia 15.05.2023r.</p>
+        <p className="form__warning">*Kurs z dnia 27.05.2024r.</p>
     </form>
 );
 
