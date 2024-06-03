@@ -2,19 +2,25 @@ import { useState } from "react";
 import "./style.css";
 
 const Form = ({ currencies }) => {
-    const [exchangeRate, setExchangeRate] = useState("0");
+    const [exchangeRate, setExchangeRate] = useState("");
 
     const [currencyShortcut, setCurrencyShortcut] = useState("");
+
+    const [result, setResult] = useState("0");
+
+    const [amount, setAmount] = useState("");
 
     const onCheckChange = ({ target }) => {
         const currency = currencies.find(currency => currency.id.toString() === target.value)
 
         setExchangeRate(currency ? currency.value : "0")
         setCurrencyShortcut(currency ? `(${currency.shortcut})` : "")
+        setResult("0");
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
+        setResult(amount * exchangeRate)
     }
 
     return (
@@ -31,6 +37,7 @@ const Form = ({ currencies }) => {
                                     name="currency"
                                     value={currency.id}
                                     onChange={onCheckChange}
+                                    required
                                 />
                                 <span className="form__currency">
                                     {currency.name} ({currency.shortcut})
@@ -47,6 +54,7 @@ const Form = ({ currencies }) => {
                             className="form__field"
                             name="exchangeRate"
                             readOnly
+                            placeholder="Wybierz walutę"
                         />
                     </label>
                 </p>
@@ -57,6 +65,8 @@ const Form = ({ currencies }) => {
                         </span>
                         <input
                             className="form__field"
+                            value={amount}
+                            onChange={({ target }) => setAmount(target.value)}
                             type="number"
                             name="amount"
                             step="0.01"
@@ -69,7 +79,7 @@ const Form = ({ currencies }) => {
                 <p className="form__paragraph">
                     <button className="form__button">Oblicz</button>
                 </p>
-                <p className="form__paragraph form__paragraph--result">Podana kwota w wybranej walucie wynosi: <strong></strong>
+                <p className="form__paragraph form__paragraph--result">Podana kwota w wybranej walucie wynosi: <strong>{parseFloat(result).toFixed(2)} PLN</strong>
                 </p>
             </fieldset>
             <p className="form__warning">*Kurs z dnia 27.05.2024r.</p>
