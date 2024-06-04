@@ -11,6 +11,13 @@ Convert one of the selected currencies to PLN.
 
 https://maciejcepielik.github.io/currency-converter-react/
 
+## Technologies used in this project
+- React
+- HTML
+- CSS with BEM convention
+- JavaScript
+- Immutability
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
