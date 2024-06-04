@@ -1,8 +1,14 @@
 # Currency converter
 
+![Coin](https://raw.githubusercontent.com/maciejcepielik/currency-converter-react/main/public/icon.png)
+
 ## Description
 
 Convert one of the selected currencies to PLN.
+
+## Demo
+
+https://maciejcepielik.github.io/currency-converter-react/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
