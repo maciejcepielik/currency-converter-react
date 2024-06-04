@@ -10,9 +10,9 @@ const currencies = [
 function App() {
   return (
     <div>
-       <Form currencies={currencies} />
+      <Form currencies={currencies} />
     </div>
- );
+  );
 }
 
 export default App;
