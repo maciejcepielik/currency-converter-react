@@ -1,6 +1,7 @@
 # Currency converter
 
-![Coin](https://raw.githubusercontent.com/maciejcepielik/currency-converter-react/main/public/icon.png)
+<img src="https://raw.githubusercontent.com/maciejcepielik/currency-converter-react/main/public/icon.png" alt="Coin" width="200"/>
+
 
 ## Description
 
