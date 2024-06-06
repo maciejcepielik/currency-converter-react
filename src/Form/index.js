@@ -16,11 +16,13 @@ const Form = ({ currencies }) => {
         setExchangeRate(currency ? currency.value : "0")
         setCurrencyShortcut(currency ? `(${currency.shortcut})` : "")
         setResult("0");
+        setAmount("");
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
         setResult(amount * exchangeRate)
+        console.log(`${parseFloat(result).toFixed(2)}`)
     }
 
     return (
