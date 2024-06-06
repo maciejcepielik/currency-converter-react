@@ -8,8 +8,8 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
-  background-image: url("../public/background_bitcoin.png");
-  background-repeat: repeat;
+  background-image: url("../public/background_image.jpg");
+  background-repeat: no-repeat;
   background-position: center;
-  background-size: auto;
+  background-size: cover;
 }
