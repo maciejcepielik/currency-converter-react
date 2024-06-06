@@ -3,11 +3,8 @@ import "./style.css";
 
 const Form = ({ currencies }) => {
     const [exchangeRate, setExchangeRate] = useState("");
-
     const [currencyShortcut, setCurrencyShortcut] = useState("");
-
     const [result, setResult] = useState("0");
-
     const [amount, setAmount] = useState("");
 
     const onCheckChange = ({ target }) => {
