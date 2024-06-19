@@ -1,7 +1,7 @@
-import "../style.css";
+import "./style.css";
 
 const Result = ({ result }) => (
-    <p className="form__paragraph form__paragraph--result">
+    <p className="form__result">
         Podana kwota w wybranej walucie wynosi:<strong> {parseFloat(result).toFixed(2)} PLN</strong>
     </p>
 );

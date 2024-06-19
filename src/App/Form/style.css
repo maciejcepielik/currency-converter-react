@@ -54,11 +54,6 @@
     text-align: center;
 }
 
-.form__paragraph--result {
-    font-weight: bold;
-    font-size: 18px;
-}
-
 .form__field {
     max-width: 350px;
     width: 100%;
@@ -70,8 +65,8 @@
 
 .form__warning {
     font-style: italic;
-    color: rgb(136, 136, 136);
-    font-size: small;
+    color: rgb(255, 255, 255);
+    font-size: medium;
     text-align: right;
     margin-top: 5px;
 }
