@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Result from "./Result";
 import "./style.css";
 
 const Form = ({ currencies }) => {
@@ -77,8 +78,7 @@ const Form = ({ currencies }) => {
                 <p className="form__paragraph">
                     <button className="form__button">Oblicz</button>
                 </p>
-                <p className="form__paragraph form__paragraph--result">Podana kwota w wybranej walucie wynosi: <strong>{parseFloat(result).toFixed(2)} PLN</strong>
-                </p>
+                <Result result={result} />
             </fieldset>
             <p className="form__warning">*Kurs z dnia 27.05.2024r.</p>
         </form>
