@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+#root {
   font-family: 'Lato', sans-serif;
   background-image: url("../public/background_image.jpg");
   background-repeat: no-repeat;
