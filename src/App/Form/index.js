@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Result from "./Result";
+import Time from "./Time";
 import "./style.css";
 
 const Form = ({ currencies }) => {
@@ -26,6 +27,7 @@ const Form = ({ currencies }) => {
         <form onSubmit={onFormSubmit} className="form">
             <fieldset className="form__fieldset">
                 <legend className="form__legend">Kalkulator walut</legend>
+                <Time />
                 <p>Wybierz walutę:</p>
                 <ul className="form__list">
                     {currencies.map(currency => (
