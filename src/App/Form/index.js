@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Result from "./Result";
 import Time from "./Time";
-import "./style.css";
+import { StyledForm, FormFieldset, FormLegend, FormList, FormItem, FormCurrency, FormLabelText, FormButton, FormParagraph, FormField, FormWarning } from "./styled";
 
 const Form = ({ currencies }) => {
     const [exchangeRate, setExchangeRate] = useState("");
@@ -24,14 +24,14 @@ const Form = ({ currencies }) => {
     }
 
     return (
-        <form onSubmit={onFormSubmit} className="form">
-            <fieldset className="form__fieldset">
-                <legend className="form__legend">Kalkulator walut</legend>
+        <StyledForm onSubmit={onFormSubmit}>
+            <FormFieldset >
+                <FormLegend>Kalkulator walut</FormLegend>
                 <Time />
                 <p>Wybierz walutę:</p>
-                <ul className="form__list">
+                <FormList>
                     {currencies.map(currency => (
-                        <li key={currency.id} className="form__item">
+                        <FormItem key={currency.id}>
                             <label>
                                 <input
                                     type="radio"
@@ -40,32 +40,31 @@ const Form = ({ currencies }) => {
                                     onChange={onCheckChange}
                                     required
                                 />
-                                <span className="form__currency">
+                                <FormCurrency>
                                     {currency.name} ({currency.shortcut})
-                                </span>
+                                </FormCurrency>
                             </label>
-                        </li>
+                        </FormItem>
                     ))}
-                </ul>
+                </FormList>
                 <p>
                     <label>
-                        <span className="form__labelText">Aktualny kurs (PLN)*: </span>
-                        <input
+                        <FormLabelText>Aktualny kurs (PLN)*: </FormLabelText>
+                        <FormField
                             value={exchangeRate}
-                            className="form__field"
                             name="exchangeRate"
                             readOnly
                             placeholder="Wybierz walutę"
-                        />
+                        >
+                        </FormField>
                     </label>
                 </p>
                 <p>
                     <label>
-                        <span className="form__labelText">
+                        <FormLabelText>
                             Kwota {currencyShortcut}:
-                        </span>
-                        <input
-                            className="form__field"
+                        </FormLabelText>
+                        <FormField
                             value={amount}
                             onChange={({ target }) => setAmount(target.value)}
                             type="number"
@@ -74,16 +73,17 @@ const Form = ({ currencies }) => {
                             min="0.00"
                             placeholder="Tutaj wpisz kwotę w wybranej walucie"
                             required
-                        />
+                        >
+                        </FormField>
                     </label>
                 </p>
-                <p className="form__paragraph">
-                    <button className="form__button">Oblicz</button>
-                </p>
+                <FormParagraph>
+                    <FormButton>Oblicz</FormButton>
+                </FormParagraph>
                 <Result result={result} />
-            </fieldset>
-            <p className="form__warning">*Kurs z dnia 27.05.2024r.</p>
-        </form>
+            </FormFieldset>
+            <FormWarning>*Kurs z dnia 27.05.2024r.</FormWarning>
+        </StyledForm>
     )
 };
 

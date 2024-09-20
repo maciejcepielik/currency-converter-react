@@ -1,72 +1,74 @@
-.form {
+import styled from "styled-components";
+
+export const StyledForm = styled.form`
     max-width: 620px;
     margin: 0 auto;
     padding: 20px;
-}
+`;
 
-.form__fieldset {
+export const FormFieldset = styled.fieldset`
     border: 2px solid rgb(0, 0, 0);
     border-radius: 5px;
     margin: 20px 5px 5px;
     padding: 10px 20px;
     background: hsl(0, 0%, 96%);
-}
+`;
 
-.form__legend {
+export const FormLegend = styled.legend`
     background-color: black;
     border-radius: 5px;
     padding: 10px 20px;
     color: white;
     font-size: 30px;
     font-style: italic;
-}
+`;
 
-.form__list {
+export const FormList = styled.ul`
     padding-left: 15px;
-}
+`;
 
-.form__item {
+export const FormItem = styled.li`
     list-style: none;
     padding: 3px 0;
-}
+`;
 
-.form__currency {
+export const FormCurrency = styled.span`
     padding-left: 3px;
-}
+`;
 
-.form__labelText {
+export const FormLabelText = styled.span`
     display: inline-block;
     max-width: 160px;
     width: 100%;
     margin-right: 5px;
-}
+`;
 
-.form__button {
+export const FormButton = styled.button`
     background: hsl(0, 0%, 80%);
     border: 1px solid hsl(0, 0%, 10%);
     border-radius: 5px;
     padding: 10px 20px;
     margin-top: 10px;
     font-weight: bold;
-}
+`;
 
-.form__paragraph {
+export const FormParagraph = styled.p`
     text-align: center;
-}
+`;
 
-.form__field {
+export const FormField = styled.input`
     max-width: 350px;
     width: 100%;
     padding: 5px;
     border: 1px solid;
     border-radius: 3px;
     text-align: center;
-}
+`;
 
-.form__warning {
+export const FormWarning = styled.p`
     font-style: italic;
     color: rgb(255, 255, 255);
     font-size: medium;
     text-align: right;
-    margin-top: 5px;
-}
+    margin: 5px;
+`;

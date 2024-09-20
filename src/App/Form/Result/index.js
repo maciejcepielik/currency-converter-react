@@ -1,9 +1,9 @@
-import "./style.css";
+import { FormResult } from "./styled";
 
 const Result = ({ result }) => (
-    <p className="form__result">
+    <FormResult>
         Podana kwota w wybranej walucie wynosi:<strong> {parseFloat(result).toFixed(2)} PLN</strong>
-    </p>
+    </FormResult>
 );
 
 export default Result;

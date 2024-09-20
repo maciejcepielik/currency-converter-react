@@ -1,23 +1,29 @@
 import { useEffect, useState } from "react";
-import "./style.css";
+import { FormTime } from "./styled";
 
 const Time = () => {
-    const [currentDate, setCurrentDate] = useState(new Date());
+    const useCurrentDate = () => {
+        const [currentDate, setCurrentDate] = useState(new Date());
 
-    useEffect(() => {
-        console.log("Wywołanie");
-        const timeInterval = setInterval(() => {
-            setCurrentDate(new Date())
-        }, 1000);
+        useEffect(() => {
+            console.log("Wywołanie");
+            const timeInterval = setInterval(() => {
+                setCurrentDate(new Date())
+            }, 1000);
 
-        return () => {
-            console.log("Odmontowanie");
-            clearInterval(timeInterval);
-        }
-    }, []);
+            return () => {
+                console.log("Odmontowanie");
+                clearInterval(timeInterval);
+            }
+        }, []);
+
+        return currentDate;
+    };
+
+    const currentDate = useCurrentDate();
 
     return (
-        <p className="form_time">
+        <FormTime>
             Dzisiaj jest&nbsp;
             {currentDate.toLocaleDateString(
                 undefined,
@@ -27,7 +33,7 @@ const Time = () => {
                     day: "numeric",
                 }
             )}, {currentDate.toLocaleTimeString()}
-        </p>
+        </FormTime>
     );
 };
 

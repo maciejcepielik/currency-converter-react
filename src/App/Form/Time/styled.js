@@ -1,4 +1,6 @@
-.form_time {
+import styled from "styled-components";
+
+export const FormTime = styled.p`
     margin: -20px 0 0;
     text-align: right;
     color: hsl(0, 0%, 39%);
@@ -6,10 +8,8 @@
     font-weight: 300;
     font-style: normal;
     font-size: 0.7em;
-}
 
-@media (max-width: 768px) {
-    .form_time {
+    @media(max-width: 768px) {
         margin: 0;
     }
-}
+`;
