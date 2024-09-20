@@ -1,23 +1,7 @@
-import { useEffect, useState } from "react";
 import { FormTime } from "./styled";
+import { useCurrentDate } from "./useCurrentData";
 
 const Time = () => {
-    const useCurrentDate = () => {
-        const [currentDate, setCurrentDate] = useState(new Date());
-
-        useEffect(() => {
-            const timeInterval = setInterval(() => {
-                setCurrentDate(new Date())
-            }, 1000);
-
-            return () => {
-                clearInterval(timeInterval);
-            }
-        }, []);
-
-        return currentDate;
-    };
-
     const currentDate = useCurrentDate();
 
     return (
