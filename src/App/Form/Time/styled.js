@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FormTime = styled.p`
-    margin: 5px 0 0;
+    margin: -20px -9px 0;
     text-align: right;
     color: hsl(0, 0%, 39%);
     font-family: "IBM Plex Mono", monospace;
