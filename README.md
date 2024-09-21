@@ -14,9 +14,10 @@ https://maciejcepielik.github.io/currency-converter-react/
 ## Technologies used in this project
 - React
 - HTML
-- CSS with BEM convention
+- Styled components
 - JavaScript
 - Immutability
+- useState, useEffect, useRef, custom Hook
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
