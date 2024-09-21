@@ -15,6 +15,7 @@ https://maciejcepielik.github.io/currency-converter-react/
 - React
 - HTML
 - Styled components
+- MediaQueries
 - JavaScript
 - Immutability
 - useState, useEffect, useRef, custom Hook
