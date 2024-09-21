@@ -7,18 +7,18 @@ export const StyledForm = styled.form`
 `;
 
 export const FormFieldset = styled.fieldset`
-    border: 2px solid rgb(0, 0, 0);
+    border: 2px solid ${({ theme }) => theme.color.black};
     border-radius: 5px;
     margin: 20px 5px 5px;
     padding: 10px 20px;
-    background: hsl(0, 0%, 96%);
+    background: ${({ theme }) => theme.color.wildSand};
 `;
 
 export const FormLegend = styled.legend`
-    background-color: black;
+    background-color: ${({ theme }) => theme.color.black};
     border-radius: 5px;
     padding: 10px 20px;
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     font-size: 30px;
     font-style: italic;
 `;
@@ -44,8 +44,8 @@ export const FormLabelText = styled.span`
 `;
 
 export const FormButton = styled.button`
-    background: hsl(0, 0%, 80%);
-    border: 1px solid hsl(0, 0%, 10%);
+    background: ${({ theme }) => theme.color.silver};
+    border: 1px solid ${({ theme }) => theme.color.codGray};
     border-radius: 5px;
     padding: 10px 20px;
     margin-top: 10px;
@@ -67,7 +67,7 @@ export const FormField = styled.input`
 
 export const FormWarning = styled.p`
     font-style: italic;
-    color: rgb(255, 255, 255);
+    color: ${({ theme }) => theme.color.white};
     font-size: medium;
     text-align: right;
     margin: 5px;

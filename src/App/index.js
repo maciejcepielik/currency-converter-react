@@ -1,11 +1,15 @@
+import { ThemeProvider } from "styled-components";
 import Form from "./Form";
 import { currencies } from "./currencies";
+import { theme } from "./theme";
 
 function App() {
   return (
-    <div>
-      <Form currencies={currencies} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <div>
+        <Form currencies={currencies} />
+      </div>
+    </ThemeProvider>
   );
 }
 
